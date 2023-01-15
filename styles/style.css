@@ -7,16 +7,34 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+.section-title {
+    font-size: 2rem;
+    color: #131313;
+    line-height: 65px;
+}
+
+.section-description {
+    color: #727272;
+    line-height: 24px;
+}
+
 /* ----------
 Header Styles 
 -----------*/
 header {
     background-color: rgba(255, 144, 14, 0.1);
+
 }
 
 .header {
     width: 80%;
     margin: auto;
+}
+
+main,
+footer {
+    width: 85%;
+    margin: 50px auto;
 }
 
 /* Navbar */
@@ -37,6 +55,7 @@ header {
 
 .right-nav ul {
     display: flex;
+    align-items: center;
 }
 
 ul li {
@@ -96,10 +115,10 @@ li a {
 
 /* Feature Section */
 .feature {
+    width: 80%;
     display: flex;
     gap: 50px;
     width: 80%;
-    margin: 50px auto;
 }
 
 .feature-imgs {
@@ -127,24 +146,289 @@ li a {
     margin-bottom: 15px;
 }
 
-.feature-detail  span:nth-of-type(1) {
+.feature-detail span:nth-of-type(1) {
     color: #727272;
     font-weight: 400;
 }
 
-.feature-detail  span:nth-of-type(2) {
+.feature-detail span:nth-of-type(2) {
     color: #131313;
+    font-weight: 600;
 }
 
-.feature-detail  span:nth-of-type(3) {
-    color:#FF900E;
+.feature-detail span:nth-of-type(3) {
+    color: #FF900E;
+    font-weight: 700;
 }
-.feature-description{
+
+.feature-description {
     color: #727272;
     line-height: 24px;
     margin-bottom: 25px;
 }
-/* Responsive Styles */
+
+/*-----------------
+ More Features Styles 
+ ------------------*/
+.features-container {
+    margin: 50px auto;
+    display: flex;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.feature-item blockquote {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 45px;
+    border-left: 4px solid #FF900E;
+    color: #131313;
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+
+
+.feature-item-description {
+    line-height: 24px;
+    color: #727272;
+    margin: 20px 0;
+}
+
+.feature-box {
+    padding: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.feature-box-title {
+    font-size: 1.1em;
+    color: #131313;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+.feature-box-description {
+    line-height: 24px;
+    color: #727272;
+}
+
+.feature-item-img {
+    width: 100%;
+}
+
+.experience-btn {
+    padding: 35px 35px;
+    background-color: #FF900E;
+    border: 0;
+    border-radius: 5px;
+    position: relative;
+    top: -50px;
+    right: 50px;
+}
+
+.experience-btn h2 {
+    font-size: 3em;
+    color: #FFFF;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.experience-btn p {
+    font-size: 1.1em;
+    color: #FFFF;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+/* Some Facts Section Styles */
+.facts {
+    margin: 50px auto;
+}
+
+.facts-btns {
+    display: flex;
+    gap: 50px;
+    padding: 50px 10px;
+    justify-content: space-around;
+}
+
+
+/*--------------
+ Button animation start
+ ----------------*/
+.fact-btn {
+    border: 0;
+    border-radius: 8px;
+    background: unset;
+    height: 212px;
+    width: 212px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+    animation: transformer 1.8s ease-in-out 0s infinite;
+}
+
+@keyframes transformer {
+
+    0%,
+    70% {
+        transform: unset;
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+
+}
+
+.fact-btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    border: none;
+}
+
+.facts-btns:hover .fact-btn {
+    animation: none;
+}
+
+/*---------------
+ Button animation End
+ --------------------*/
+
+
+.fact-btn img {
+    height: 45px;
+    width: 45px;
+}
+
+.fact-btn h2 {
+    font-size: 2rem;
+    line-height: 65px;
+    color: #424242;
+}
+
+.fact-btn p {
+    color: #757575;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* Sponsors Section Styles */
+.sponsors {
+    text-align: center;
+    width: 85%;
+    margin: 50px auto;
+}
+
+.sponsor-imgs img {
+    height: 40px;
+    /* filter: sepia(1) hue-rotate(170deg) brightness(45%) saturate(1000%); */
+    filter: sepia(25%) brightness(25%) opacity(50%);
+    transition: all 0.2s;
+
+}
+
+.sponsor-imgs img:hover {
+    filter: sepia(0%) brightness(50%) opacity(100%);
+
+}
+
+.sponsor-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px 0;
+    gap: 50px;
+}
+
+
+/* Footer section Styles */
+.footer {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.footer-text {
+    padding: 30px;
+    background: #FFF4E7;
+    border-radius: 8px;
+}
+
+/* Projects styles */
+.project-title {
+    display: inline-block;
+    border-right: 3px solid #FF900E;
+    line-height: 28px;
+    padding: 10px 10px 10px 0;
+}
+
+.project-title-darken {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: #515151;
+}
+
+.projects-items img {
+    width: 100%;
+}
+
+.projects-items {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "i1 i1 i1 i1 i1 i1 i1 i1 i2 i2 i2 i2"
+        "i1 i1 i1 i1 i1 i1 i1 i1 i3 i3 i3 i3"
+        "i6 i6 i6 i6 i5 i5 i5 i5 i4 i4 i4 i4"
+    ;
+}
+
+.item1 {
+    grid-area: i1;
+}
+
+.item2 {
+    grid-area: i2;
+}
+
+.item3 {
+    grid-area: i3;
+}
+
+.item4 {
+    grid-area: i4;
+}
+
+.item5 {
+    grid-area: i5;
+}
+
+.item6 {
+    grid-area: i6;
+}
+
+.projects-items h4 {
+    color: #131313;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.projects-items p {
+    color: #727272;
+    line-height: 24px;
+}
+
+/* =========-/-/-/-===============
+         Responsive Styles 
+============-/-/-/-=============== */
 @media screen and (max-width: 576px) {
 
     .navbar {
@@ -179,14 +463,41 @@ li a {
     .btn-primary a {
         font-size: 16px;
     }
-    .feature{
-        flex-direction: column-reverse;
+
+    .feature {
+        flex-direction: column;
         text-align: center;
     }
+
     .feature-imgs {
         grid-template-columns: repeat(1, 1fr);
     }
-    .btn-primary{
+
+    .btn-primary {
         align-self: center;
     }
+
+    .features-container {
+        flex-direction: column;
+    }
+
+    .experience-btn {
+        top: -50px;
+        right: -100px;
+    }
+
+.facts-btns {
+    flex-direction: column;
+}
+
+.projects-items {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "i1 i1 i1 i1 i1 i1 i2 i2 i2 i2 i2 i2"
+        "i5 i5 i5 i5 i5 i5 i3 i3 i3 i3 i3 i3"
+        "i6 i6 i6 i6 i6 i6 i4 i4 i4 i4 i4 i4"
+    ;
+    justify-content: space-between;
+}
 }
